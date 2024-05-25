@@ -183,7 +183,14 @@ section h2 {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
-
+.property-card img {
+  width: 250px;
+  border-radius: 10px;
+}
+.product-card img {
+  width: 250px;
+  border-radius: 10px;
+}
 .icon {
   font-size: 40px;
   margin-bottom: 10px;
@@ -348,4 +355,194 @@ footer {
 
 .legal a:hover {
   color: #4caf50;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    flex-direction: row;
+    padding: 10px;
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  /* Hero Section */
+  .hero-content {
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  /* About Section */
+  #about-text {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about img {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  /* Services Section */
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    max-width: 90%;
+  }
+
+  /* Properties Section */
+  .property-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .property-card {
+    max-width: 90%;
+  }
+
+  /* Products Section */
+  .product-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    max-width: 90%;
+  }
+
+  /* Contact Section */
+  #contact {
+    margin: 10px;
+  }
+
+  /* Footer */
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .footer-links a {
+    margin: 10px 0;
+  }
+
+  .social-media {
+    margin-top: 20px;
+  }
+
+  .legal {
+    flex-direction: column;
+  }
+
+  .legal a {
+    margin: 10px 0;
+  }
+}
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .bx {
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Shift the menu to the right initially */
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: right 0.3s ease; /* Use 'right' property for animation */
+    z-index: 1000;
+  }
+
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+  }
+
+  .nav-menu.show {
+    right: 0; /* Slide the menu in from the right */
+  }
+
+  .overlay.show {
+    display: block;
+  }
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+}
+
+.nav-menu.show {
+  left: 0;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+
+.overlay.show {
+  display: block;
+}
+
+.nav-menu.show {
+  right: 0; /* Slide the menu in from the right */
+}
+
+.close-btn {
+  display: none;
 }

@@ -14,9 +14,20 @@
   </head>
   <body>
     <!-- Header Section -->
+    <!-- Header Section -->
     <header>
+      <!-- ... -->
+      <div class="overlay"></div>
+      <!-- ... -->
       <div class="logo">Sindiq Global Service</div>
-      <nav>
+      <div class="hamburger">
+        <i class="bx bx-menu"></i>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="close-btn">
+          <i class="bx bx-x"></i>
+        </div>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="#">About Us</a></li>
@@ -27,7 +38,6 @@
         </ul>
       </nav>
     </header>
-
     <!-- Hero Section -->
     <section id="hero">
       <div class="hero-content">
@@ -116,7 +126,7 @@
       <h2>Featured Properties</h2>
       <div class="property-cards">
         <div class="property-card">
-          <img src="smart_home.jpg" alt="Smart Home" />
+          <img src="images/Smart home.jpg" alt="Smart Home" />
           <h3>Smart Homes</h3>
           <p>
             Experience the luxury of living in a home equipped with the latest
@@ -124,7 +134,9 @@
           </p>
         </div>
         <div class="property-card">
-          <img src="urban_farm.jpg" alt="Urban Farm" />
+          <img src="images/Urban Farms.jpg" alt="Urban Farm" />
+          <br />
+          <br />
           <h3>Urban Farms</h3>
           <p>
             Innovative urban farming spaces that bring agriculture to the heart
@@ -132,7 +144,7 @@
           </p>
         </div>
         <div class="property-card">
-          <img src="eco_friendly_villa.jpg" alt="Eco-Friendly Villa" />
+          <img src="images/Eco-Friendly Villa.jpg" alt="Eco-Friendly Villa" />
           <h3>Eco-Friendly Villas</h3>
           <p>
             Luxury villas designed with eco-friendly materials and renewable
@@ -146,22 +158,22 @@
       <h2>Our Products</h2>
       <div class="product-cards">
         <div class="product-card">
-          <img src="seeds.jpg" alt="Organic Seeds" />
+          <img src="images/Organic Seeds.jpg" alt="Organic Seeds" />
           <h3>Organic Seeds</h3>
           <p>High-quality organic seeds for a variety of crops.</p>
         </div>
         <div class="product-card">
-          <img src="fertilizers.jpg" alt="Fertilizers" />
+          <img src="images/Fertilizers.jpg" alt="Fertilizers" />
           <h3>Fertilizers</h3>
           <p>Eco-friendly fertilizers to enrich your soil.</p>
         </div>
         <div class="product-card">
-          <img src="futuristic_apartments.jpg" alt="Pepper" />
+          <img src="images/Pepper.jpg" alt="Pepper" />
           <h3>Pepper</h3>
           <p>High-quality pepper cultivation with a focus on sustainability.</p>
         </div>
         <div class="product-card">
-          <img src="cassava.jpg" alt="Cassava" />
+          <img src="images/Cassava.jpg" alt="Cassava" />
           <h3>Cassava</h3>
           <p>
             Innovative cassava farming practices that boost productivity and
@@ -169,12 +181,12 @@
           </p>
         </div>
         <div class="product-card">
-          <img src="machinery.jpg" alt="Agri-Machinery" />
+          <img src="images/Agri-Machinery.jpg" alt="Agri-Machinery" />
           <h3>Agri-Machinery</h3>
           <p>State-of-the-art machinery for efficient farming.</p>
         </div>
         <div class="product-card">
-          <img src="irrigation.jpg" alt="Irrigation Systems" />
+          <img src="images/Irrigation Systems.jpg" alt="Irrigation Systems" />
           <h3>Irrigation Systems</h3>
           <p>Innovative irrigation solutions to optimize water usage.</p>
         </div>
@@ -199,19 +211,21 @@
         <div class="testimonial-card">
           <p>
             "GreenHarvest has transformed our farming practices. Our yields have
-            never been better!" - Sarah J.
+            never been better!"<br />
+            - Olaferanmi.
           </p>
         </div>
         <div class="testimonial-card">
           <p>
-            "The team's expertise and technology solutions are top-notch." -
-            John M.
+            "The team's expertise and technology solutions are top-notch."
+            <br />
+            - Abisayomi.
           </p>
         </div>
         <div class="testimonial-card">
           <p>
-            "Their sustainable approach aligns perfectly with our values." -
-            Emily T.
+            "Their sustainable approach aligns perfectly with our values."
+            <br />- Oluwadamiloma.
           </p>
         </div>
       </div>
@@ -236,7 +250,7 @@
         <button type="submit">Send Message</button>
       </form>
       <div class="contact-info">
-        <p>Phone: <a href="tel:+234033565630">(+234) 033-565-630</a></p>
+        <p>Phone: <a href="tel:+2348033565630">(+234) 8033-565-630</a></p>
         <p>
           Email:
           <a href="mailto:sindiqglobalservices@gmail.com"
@@ -279,5 +293,26 @@
       </div>
       <p>© 2024 Sindiq Global Services. All Rights Reserved.</p>
     </footer>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      const overlay = document.querySelector(".overlay");
+      const closeBtn = document.querySelector(".close-btn");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+        overlay.classList.toggle("show");
+      });
+
+      overlay.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+        overlay.classList.remove("show");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+        overlay.classList.remove("show");
+      });
+    </script>
   </body>
 </html>
